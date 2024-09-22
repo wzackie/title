@@ -1,0 +1,82 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    width:100%;
+    height:100vh;
+    top: 0;
+    left:0;
+    background-color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.title{
+    font-size:20px;
+    text-transform: uppercase;
+    padding:0.5rem 0;
+    font-family: "Roboto", sans-serif;
+    padding:10px;
+}
+.text{
+    position: absolute;
+}
+.text:hover .deux-one{
+    width:0;
+    transform:translateX(-1000px);
+}
+.text:hover .deux-two{
+    width:0;
+    transform:translateX(1000px);
+}
+.text:hover .un-one{
+    transform:translatey(1px);
+    width:5px;
+    opacity:1;
+}
+.text:hover .un-two{
+    transform:translatey(-1px);
+    width:5px;
+    opacity:1;
+}
+.text span{
+    position: absolute;
+    background-color:#000;
+    transition:.5s;
+}
+.deux-one,.deux-two{
+    width:100%;
+    height:5px;
+}
+.deux-one{
+    top:0;
+    left:0;
+}
+.deux-two{
+    right:0;
+    bottom:0;
+}
+.un-one,.un-two{
+    height:100%;
+    width:6px;
+}
+.un-one{
+    top:0;
+    left:0;
+    transform:translateX(-0.75rem,-1000px);
+    opacity:0;
+    transform:translatey(-1000px);
+}
+.un-two{
+    bottom:0;
+    right:0;
+    transform:translateX(0.75rem,1000px);
+    opacity:0;
+    transform:translatey(1000px);
+}
